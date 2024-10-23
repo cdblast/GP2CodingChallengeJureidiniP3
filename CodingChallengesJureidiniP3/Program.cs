@@ -10,7 +10,13 @@ class Challenges
 
         while (keepLoop)
         {
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 7 challenges total currently.)");
+            //Console.WriteLine("Would you like to run a challenge?");
+
+            //var keepLoopAsk = Console.ReadLine();
+            //bool keepLoop 
+            //to-do: please ask for keepLoop at the end to continue running loop or to end program!!!
+
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one.\n (Provide a number. There are 7 challenges total currently. If you do not provide a number, the program crashes.)");
 
             var programChooser = Console.ReadLine();
             int programChooserint = int.Parse(programChooser);
@@ -126,11 +132,40 @@ class Challenges
                 Console.WriteLine("The number provided is equal to or less than 0: " + lessThanOrEqualToZero(lessThanZeroint));
             }
 
+            if (programChooserint == 8)
+            {
+                //Challenge 8 - Is the sum of two numbers is greater or less than 100?
+                Console.WriteLine("Please provide 2 numbers to find if the sum is less than 100.");
+
+                var number1 = Console.ReadLine();
+                int number1int = int.Parse(number1);
+
+                Console.WriteLine("Great! Type one more number.");
+
+                var number2 = Console.ReadLine();
+                int number2int = int.Parse(number2);
+
+                Sum(number1int, number2int);
+
+                if (Sum(number1int, number2int) < 100)
+                {
+                    Console.WriteLine("The sum of the number : " + number1 + " and the number: " + number2 + " is less than 100.");
+                }
+
+                else
+                {
+                    Console.WriteLine("The sum of the number : " + number1 + " and the number: " + number2 + " is NOT less than 100.");
+
+                }
+            }
+
+            // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
+
             //for uhhhhh. failsafe?
             //this should be fine i think
             else
             {
-                Console.WriteLine("----\n This program will repeat now. If you are done, close the window. \n ----");
+                Console.WriteLine("----\n This program will repeat now. Think about your actions. If you are done, close the window. \n ----");
             }
 
 

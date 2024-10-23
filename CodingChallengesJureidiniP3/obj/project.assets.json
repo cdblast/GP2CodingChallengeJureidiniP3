@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Per3Student\\Documents\\ConsoleScripts\\CodingChallengesJureidiniP3\\CodingChallengesJureidiniP3.csproj",
+      "projectUniqueName": "C:\\Users\\Per3Student\\Documents\\Unity\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\CodingChallengesJureidiniP3.csproj",
       "projectName": "CodingChallengesJureidiniP3",
-      "projectPath": "C:\\Users\\Per3Student\\Documents\\ConsoleScripts\\CodingChallengesJureidiniP3\\CodingChallengesJureidiniP3.csproj",
+      "projectPath": "C:\\Users\\Per3Student\\Documents\\Unity\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\CodingChallengesJureidiniP3.csproj",
       "packagesPath": "C:\\Users\\Per3Student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Per3Student\\Documents\\ConsoleScripts\\CodingChallengesJureidiniP3\\obj\\",
+      "outputPath": "C:\\Users\\Per3Student\\Documents\\Unity\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Per3Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
