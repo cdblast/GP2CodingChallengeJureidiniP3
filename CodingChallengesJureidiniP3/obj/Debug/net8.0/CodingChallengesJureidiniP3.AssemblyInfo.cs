@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodingChallengesJureidiniP3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b041c2de761dd2f7a2652a463561bce2285d6af5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+959bd2585dfce1d07420f86e2bcbb36fc0753d79")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodingChallengesJureidiniP3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodingChallengesJureidiniP3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

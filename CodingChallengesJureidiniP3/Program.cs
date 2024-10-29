@@ -6,6 +6,7 @@ class Challenges
 {
     public static void Main(string[] args)
     {
+#pragma warning disable CS8604 // Possible null reference argument.
         var keepLoop = true;
 
         while (keepLoop)
@@ -16,10 +17,10 @@ class Challenges
             //bool keepLoop 
             //to-do: please ask for keepLoop at the end to continue running loop or to end program!!!
 
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one.\n (Provide a number. There are 7 challenges total currently. If you do not provide a number, the program crashes.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one.\n (Provide a number. There are 9 challenges total currently. If you do not provide a number, the program crashes.)");
 
             var programChooser = Console.ReadLine();
-            int programChooserint = int.Parse(programChooser);
+            int programChooserint = int.Parse(programChooser)!;
 
             if (programChooserint == 1)
             {
@@ -159,6 +160,32 @@ class Challenges
                 }
             }
 
+            if (programChooserint == 9)
+            {
+                //Challenge 9 - Are two user-inputs equal to eachother?
+                Console.WriteLine("Please provide 2 numbers to check if they are equivalent to eachother.");
+
+                var number1 = Console.ReadLine();
+                int number1int = int.Parse(number1);
+
+                Console.WriteLine("Great! Type one more number.");
+
+                var number2 = Console.ReadLine();
+                int number2int = int.Parse(number2);
+                
+                //isEqual(number1int, number2int);
+                
+                if (isEqual(number1int, number2int))
+                {
+                    Console.WriteLine("Both numbers are equivalent.");
+                }
+                else
+                {
+                    Console.WriteLine("The numbers " + number1 + " and " + number2 + " are not equivalent to eachother.");
+                }
+
+            }
+
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
             //for uhhhhh. failsafe?
@@ -171,6 +198,7 @@ class Challenges
 
         }
 
+#pragma warning restore CS8604 // Possible null reference argument.
     }
 
     public static int Sum(int number1, int number2)
@@ -204,4 +232,8 @@ class Challenges
         return number <= 0;
     }
 
+    public static bool isEqual(int number1, int number2)
+    {
+        return number1 == number2;
+    }
 }
