@@ -17,7 +17,7 @@ class Challenges
             //bool keepLoop 
             //to-do: please ask for keepLoop at the end to continue running loop or to end program!!!
 
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one.\n (Provide a number. There are 9 challenges total currently. If you do not provide a number, the program crashes.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different challenges you will have to choose from.\n(Provide a number. There are 9 challenges total currently. If you do not provide a number, the program crashes.)");
 
             var programChooser = Console.ReadLine();
             int programChooserint = int.Parse(programChooser)!;
@@ -150,12 +150,12 @@ class Challenges
 
                 if (Sum(number1int, number2int) < 100)
                 {
-                    Console.WriteLine("The sum of the number : " + number1 + " and the number: " + number2 + " is less than 100.");
+                    Console.WriteLine("The sum of the number : " + number1 + " and the number: " + number2 + " is " + Sum(number1int, number2int) + ", which is less than 100.");
                 }
 
                 else
                 {
-                    Console.WriteLine("The sum of the number : " + number1 + " and the number: " + number2 + " is NOT less than 100.");
+                    Console.WriteLine("The sum of the number : " + number1 + " and the number: " + number2 + " is " + Sum(number1int, number2int) + ", which is NOT less than 100.");
 
                 }
             }
@@ -188,7 +188,7 @@ class Challenges
 
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
-            //for uhhhhh. failsafe?
+            //for uhhhhh. user warning?
             //this should be fine i think
             else
             {
