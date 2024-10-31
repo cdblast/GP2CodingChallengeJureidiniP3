@@ -186,6 +186,16 @@ class Challenges
 
             }
 
+            if (programChooserint == 10)
+            {
+                //Challenge 10 - return the user-input phrase with the word "Something" before it
+                Console.WriteLine("Talk :)");
+
+                var words10 = Console.ReadLine();
+
+                Console.WriteLine(giveMeSomething(words10));  
+            }
+
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
             //for uhhhhh. user warning?
@@ -235,5 +245,13 @@ class Challenges
     public static bool isEqual(int number1, int number2)
     {
         return number1 == number2;
+    }
+
+    public static string giveMeSomething(string words10)
+    {
+        var Smthn = " Something ";
+
+        return Smthn + words10;
+
     }
 }
