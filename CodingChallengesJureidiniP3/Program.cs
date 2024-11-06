@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design;
+using System.Diagnostics;
 using System.Net.Security;
 
 class Challenges
@@ -17,7 +18,7 @@ class Challenges
             //bool keepLoop 
             //to-do: please ask for keepLoop at the end to continue running loop or to end program!!!
 
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different challenges you will have to choose from.\n(Provide a number. There are 9 challenges total currently. If you do not provide a number, the program crashes.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different challenges you will have to choose from.\n(Provide a number. There are 11 challenges total currently. If you do not provide a number, the program crashes.)");
 
             var programChooser = Console.ReadLine();
             int programChooserint = int.Parse(programChooser)!;
@@ -196,6 +197,26 @@ class Challenges
                 Console.WriteLine(giveMeSomething(words10));  
             }
 
+            if(programChooserint == 11)
+            {
+                bool Boolean11 = true;
+                //Challenge 11 - return a boolean value as opposite of itself
+                Console.WriteLine("Please type Y if you want your boolean true. Type N if you want your boolean false.");
+
+                var BooleanDecider = Console.ReadLine();
+                if (BooleanDecider == "Y")
+                {
+                    Boolean11 = true;
+                }
+                else if (BooleanDecider == "N") 
+                {
+                    Boolean11 = false;
+                }
+
+                Console.WriteLine("Guess what! Your boolean's being returned as " + Reverse(Boolean11) + " anyways. Blehhh :P");
+
+            }
+
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
             //for uhhhhh. user warning?
@@ -253,5 +274,16 @@ class Challenges
 
         return Smthn + words10;
 
+    }
+
+    public static bool Reverse(bool Boolean11)
+    {
+        if (Boolean11)
+        {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }
