@@ -201,19 +201,23 @@ class Challenges
             {
                 bool Boolean11 = true;
                 //Challenge 11 - return a boolean value as opposite of itself
-                Console.WriteLine("Please type Y if you want your boolean true. Type N if you want your boolean false.");
+                Console.WriteLine("Please type True if you want your boolean true. Type False if you want your boolean false.");
 
                 var BooleanDecider = Console.ReadLine();
-                if (BooleanDecider == "Y")
+                if (BooleanDecider == "true")
                 {
                     Boolean11 = true;
                 }
-                else if (BooleanDecider == "N") 
+                else if (BooleanDecider == "false") 
                 {
                     Boolean11 = false;
                 }
+                else
+                {
+                    Console.WriteLine("You must have mispelt something. Try again.");
+                }
 
-                Console.WriteLine("Guess what! Your boolean's being returned as " + Reverse(Boolean11) + " anyways. Blehhh :P");
+                Console.WriteLine("Guess what! Your boolean's being returned as " + Reverse(Boolean11) + " anyways.");
 
             }
 
