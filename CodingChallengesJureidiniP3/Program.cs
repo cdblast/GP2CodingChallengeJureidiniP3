@@ -18,7 +18,7 @@ class Challenges
             //bool keepLoop 
             //to-do: please ask for keepLoop at the end to continue running loop or to end program!!!
 
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different challenges you will have to choose from.\n(Provide a number. There are 11 challenges total currently. If you do not provide a number, the program crashes.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different challenges you will have to choose from.\n(Provide a number. There are 12 challenges total currently. If you do not provide a number, the program crashes.)");
 
             var programChooser = Console.ReadLine();
             int programChooserint = int.Parse(programChooser)!;
@@ -221,6 +221,18 @@ class Challenges
 
             }
 
+            if(programChooserint == 12)
+            {
+                //Challenge 12 - Write a function that converts hours into seconds.
+                Console.WriteLine("Please provide the hours you want to convert.");
+
+                var hoursToConvert = Console.ReadLine();
+                int hoursToConvertint = int.Parse(hoursToConvert);
+
+                Console.WriteLine("There are " + ConvertHours(hoursToConvertint) + " seconds in " + hoursToConvert + " hours.");
+
+            }
+
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
             //for uhhhhh. user warning?
@@ -243,6 +255,11 @@ class Challenges
     public static int Convert(int number)
     {
         return number * 60;
+    }
+
+    public static int ConvertHours(int number)
+    {
+        return number * 3600;
     }
     public static int PlusOne(int number)
     {
