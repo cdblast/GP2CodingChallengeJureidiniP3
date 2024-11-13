@@ -233,6 +233,24 @@ class Challenges
 
             }
 
+            if (programChooserint == 13)
+            {
+                // Challenge 13 - n amount of sides in a polygon to return the total sum of internal angles.
+
+                Console.WriteLine("Hello! Please input the amount of sides in your polygon.");
+                var amountOfSides = Console.ReadLine();
+                int amountOfSidesint = int.Parse(amountOfSides);
+
+                if (amountOfSidesint <= 2) {
+                    Console.WriteLine("Please input a number higher than 2.");
+                }
+                else
+                {
+
+                    Console.WriteLine("In a polygon with " + amountOfSides + ", the total sum of internal angles is " + SumPolygon(amountOfSidesint) + ".");
+                }
+            }
+
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
             //for uhhhhh. user warning?
@@ -277,6 +295,11 @@ class Challenges
     public static float triArea(float number1, int number2)
     {
         return (number1 * number2) / 2;
+    }
+
+    public static float SumPolygon(float number1)
+    {
+        return (number1 - 2) * 180;
     }
 
     public static bool lessThanOrEqualToZero(int number)
