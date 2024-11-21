@@ -2,6 +2,8 @@
 using System.ComponentModel.Design;
 using System.Diagnostics;
 using System.Net.Security;
+using System.Numerics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 class Challenges
 {
@@ -18,7 +20,7 @@ class Challenges
             //bool keepLoop 
             //to-do: please ask for keepLoop at the end to continue running loop or to end program!!!
 
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different challenges you will have to choose from.\n(Provide a number. There are 12 challenges total currently. If you do not provide a number, the program crashes.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different challenges you will have to choose from.\n(Provide a number. There are 14 challenges total currently. If you do not provide a number, the program crashes.)");
 
             var programChooser = Console.ReadLine();
             int programChooserint = int.Parse(programChooser)!;
@@ -251,6 +253,43 @@ class Challenges
                 }
             }
 
+            if (programChooserint == 14)
+            {
+                // Challenge 14 - A student learning C# was trying to make a function. His code should concatenate a passed string name with string "Edabit" and store it in a variable called result. He needs your help to fix this code.
+                Console.WriteLine("Enter your name :)");
+                var name = Console.ReadLine();
+
+                var result = (nameString(name));
+
+                Console.WriteLine(result);
+            }
+
+            if(programChooserint == 15)
+            {
+                //Challenge 15 -
+                bool Boolean15 = false;
+                bool Boolean16 = false;
+
+                Console.WriteLine("Hello! Help determine whether both bools are true.");
+
+                Console.WriteLine("Please type true or false, lowercase only.");
+                var BooleanRead = Console.ReadLine();
+                if (BooleanRead == "true")
+                { Boolean15 = true; }
+                else if (BooleanRead == "false") { Boolean15 = false; }
+                else { Console.WriteLine("That didn't work. Try again."); }
+
+                Console.WriteLine("Great, type true or false once more.");
+                var BooleanRead2 = Console.ReadLine();
+                if (BooleanRead2 == "true") { Boolean16 = true; }
+                else if (BooleanRead == "false") { Boolean16 = false; }
+                else { Console.WriteLine("That didn't work. Try again."); }
+
+                Console.WriteLine("And (" + Boolean15 + ", " + Boolean16 + ") --> " + AndFunction(Boolean15, Boolean16));
+
+
+            }
+
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
             //for uhhhhh. user warning?
@@ -320,6 +359,14 @@ class Challenges
 
     }
 
+    public static string nameString(string words10)
+    {
+        var Edabit = "Edabit";
+
+        return words10 + Edabit;
+
+    }
+
     public static bool Reverse(bool Boolean11)
     {
         if (Boolean11)
@@ -328,6 +375,18 @@ class Challenges
         }
         else {
             return true;
+        }
+    }
+
+    public static bool AndFunction(bool Boolean15, bool Boolean16)
+    {
+        if (Boolean15 && Boolean16)
+        {
+            return true;
+        }
+        else 
+        { 
+            return false; 
         }
     }
 }
