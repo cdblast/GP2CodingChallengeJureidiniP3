@@ -290,6 +290,42 @@ class Challenges
 
             }
 
+            if (programChooserint == 16)
+            {
+                //challenge 16 count basketball points. funnction points(7,5) should count (3-pointers, 2-pointers) so (7,5) should be 29
+
+                Console.WriteLine("Hello! Please tell us how many 2-point shots were made.");
+
+                var number1 = Console.ReadLine();
+                int number1int = int.Parse(number1);
+
+                Console.WriteLine("Please tell us how many 3-point shots were made.");
+
+                var number2 = Console.ReadLine();
+                int number2int = int.Parse(number2);
+
+                Console.WriteLine("points(" + number1 + ", " + number2 + ") --> " + Points(number1int, number2int));
+            }
+
+            if (programChooserint == 17)
+            {
+                // challenge 17 find the perimeter of a rectangle
+
+                Console.WriteLine("Hello! Please provide the width of a rectangle to help find the perimeter.");
+
+                var number1 = Console.ReadLine();
+                int number1int = int.Parse(number1);
+
+                Console.WriteLine("Excellent. Please provide the height.");
+
+                var number2 = Console.ReadLine();
+                int number2int = int.Parse(number2);
+
+                Console.WriteLine("FindPerimeter(" + number1 + ", " + number2 + ") --> " + FindPerimeter(number1int, number2int));
+            }
+
+
+
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
             //for uhhhhh. user warning?
@@ -303,6 +339,17 @@ class Challenges
         }
 
 #pragma warning restore CS8604 // Possible null reference argument.
+    }
+
+
+    public static float FindPerimeter(int width, int height)
+    {
+        return (width * 2) + (height * 2);
+    }
+
+    public static int Points(int twopointers, int threepointers)
+    {
+        return ((threepointers * 3) + (twopointers * 2));
     }
 
     public static int Sum(int number1, int number2)
