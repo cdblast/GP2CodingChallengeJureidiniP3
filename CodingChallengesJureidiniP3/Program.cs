@@ -324,6 +324,18 @@ class Challenges
                 Console.WriteLine("FindPerimeter(" + number1 + ", " + number2 + ") --> " + FindPerimeter(number1int, number2int));
             }
 
+            if (programChooserint == 21)
+            {
+                //Create a function that takes a number (from 1 to 12) and returns its corresponding month name as a string. For example, if you're given 3 as input, your function should return "March", because March is the 3rd month.
+                Console.WriteLine("Hello! Give us a number for the corresponding month.");
+
+                var number21 = Console.ReadLine();
+                int number21int = int.Parse(number21);
+
+
+                Console.WriteLine("Challenge 21 MonthName(" + number21int + ") is: " + MonthName(number21int));
+            }
+
 
 
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
@@ -339,6 +351,15 @@ class Challenges
         }
 
 #pragma warning restore CS8604 // Possible null reference argument.
+    }
+
+    public static string MonthName(int Number21)
+    {
+        string[] months = { "Janurary", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+
+        Number21 = Number21 - 1;
+
+        return months[Number21];
     }
 
 
