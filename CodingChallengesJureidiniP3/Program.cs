@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Design;
 using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using System.Net.Security;
 using System.Numerics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -339,12 +340,30 @@ class Challenges
 
             if (programChooserint == 22){
                 //From an array, return the minimum value and max value. Ex: [1,3,600,20] --> [1,600]
+                int[] array1 = [];
+                bool responses = true;
+                int Counter = 0;
+
                 Console.WriteLine("This is a function to sort and provide the smallest and largest number from an array.");
                 Console.WriteLine("Give us numbers for an array!");
-                
 
-                int[] array1 = [1, 500, -9, 20];
-                Console.WriteLine("the" + MinMax(array1));
+                Console.WriteLine("How many numbers do you want to sort?");
+                var number22a = Console.ReadLine();
+                int maxArraynum = int.Parse(number22a);
+
+                while (responses == true){
+                    Console.WriteLine("One number at a time, please.");
+                    var number22 = Console.ReadLine();
+                    int number21int = int.Parse(number22);
+                    array1[Counter] = number21int;
+                    Counter += 1;
+                    if (Counter == maxArraynum)
+                    {
+                        responses = false;
+                    }
+                }
+
+                Console.WriteLine("FindMinMax(" + string.Join(",", array1) + ") --> [" + MinMax(array1) + "]");
             }
 
 
@@ -364,14 +383,15 @@ class Challenges
 #pragma warning restore CS8604 // Possible null reference argument.
     }
 
-    public static Array MinMax(int[] arr){
+    public static string MinMax(int[] arr){
         Array.Sort(arr);
         int MaxInt = arr.Length - 1;
         int Min = arr.ElementAtOrDefault(0);
         int Max = arr.ElementAtOrDefault(MaxInt);
 
         int [] MinMaxArr = [Min, Max];
-        return MinMaxArr;
+
+        return (Min + "," + Max);
     }
 
     public static string MonthName(int Number21)

@@ -8,24 +8,26 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "C:\\Users\\Per3Student\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/GP2CodingChallengeJureidiniP3/CodingChallengesJureidiniP3/CodingChallengesJureidiniP3.csproj",
+      "projectUniqueName": "C:\\Users\\Per3Student\\Documents\\github\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\CodingChallengesJureidiniP3.csproj",
       "projectName": "CodingChallengesJureidiniP3",
-      "projectPath": "/workspaces/GP2CodingChallengeJureidiniP3/CodingChallengesJureidiniP3/CodingChallengesJureidiniP3.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/GP2CodingChallengeJureidiniP3/CodingChallengesJureidiniP3/obj/",
+      "projectPath": "C:\\Users\\Per3Student\\Documents\\github\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\CodingChallengesJureidiniP3.csproj",
+      "packagesPath": "C:\\Users\\Per3Student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Per3Student\\Documents\\github\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/codespace/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Per3Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -64,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
