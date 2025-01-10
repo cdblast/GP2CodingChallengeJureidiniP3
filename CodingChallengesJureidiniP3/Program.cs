@@ -2,6 +2,7 @@
 using System.ComponentModel.Design;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
+using System.Net.NetworkInformation;
 using System.Net.Security;
 using System.Numerics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -366,6 +367,42 @@ class Challenges
                 Console.WriteLine("FindMinMax(" + string.Join(",", array1) + ") --> [" + MinMax(array1) + "]");
             }
 
+            if (programChooserint == 23)
+            {
+                //out of an array, add the sum of all of their absolute values together.
+                bool responses = true;
+                int Counter2 = 0;
+
+                Console.WriteLine("This is a function to add the absolute value of all numbers in an array.");
+                Console.WriteLine("Give us numbers for an array!");
+
+                Console.WriteLine("How many numbers do you want to sort?");
+                var number23a = Console.ReadLine();
+                int maxArraynum = int.Parse(number23a);
+                int[] array1 = new int[maxArraynum];
+                
+                while (responses == true)
+                {
+                    Console.WriteLine("Is this number negative? (Y/N)");
+                    var number23neg = Console.ReadLine();
+
+                    Console.WriteLine("Type your number.");
+                    var number23 = Console.ReadLine();
+                    int number23int = int.Parse(number23);
+                    if (number23neg.ToUpper() == "Y")
+                    {
+                        number23int = number23int * -1;
+                    }
+                    array1[Counter2] = number23int;
+                    Counter2 += 1;
+                    if (Counter2 == maxArraynum)
+                    {
+                        responses = false;
+                    }
+                }
+                Console.WriteLine(getAbsSum(array1));
+            }
+
 
 
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
@@ -381,6 +418,18 @@ class Challenges
         }
 
 #pragma warning restore CS8604 // Possible null reference argument.
+    }
+
+    public static int getAbsSum(int[] arr)
+    {
+        int AbsSum = 0;
+        int counter = 0;
+        while (counter != arr.Length)
+        {
+            AbsSum = AbsSum + Math.Abs(arr[counter]);
+            counter++;
+        }
+        return AbsSum;
     }
 
     public static string MinMax(int[] arr){
