@@ -22,7 +22,7 @@ class Challenges
             //bool keepLoop 
             //to-do: please ask for keepLoop at the end to continue running loop or to end program!!!
 
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different challenges you will have to choose from.\n(Provide a number. There are 22 challenges total currently. If you do not provide a number, the program crashes.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different challenges you will have to choose from.\n(Provide a number. There are 24 challenges total currently. If you do not provide a number, the program crashes.)");
             Console.WriteLine("Note:Challenges do not exist for 18,19,20.");
 
             var programChooser = Console.ReadLine();
@@ -403,6 +403,20 @@ class Challenges
                 Console.WriteLine(getAbsSum(array1));
             }
 
+            if(programChooserint == 24)
+            {
+                Console.WriteLine("In Challenge 24, we will be calculating an exponent.");
+                Console.WriteLine("Give us the base number");
+
+                var number24 = Console.ReadLine();
+                int number24int = int.Parse(number24);
+
+                Console.WriteLine("to the power of?..");
+                var number24exp = Console.ReadLine();
+                int number24expint = int.Parse(number24exp);
+
+                Console.WriteLine("CalculateExponent(" + number24 + ", " + number24exp + ") --> " + CalculateExponent(number24int, number24expint));
+            }
 
 
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
@@ -418,6 +432,12 @@ class Challenges
         }
 
 #pragma warning restore CS8604 // Possible null reference argument.
+    }
+
+    public static double CalculateExponent(int Num, int Exp)
+    {
+        double pow = Math.Pow(Num, Exp);
+        return pow;
     }
 
     public static int getAbsSum(int[] arr)
