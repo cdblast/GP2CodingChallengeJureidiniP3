@@ -418,6 +418,31 @@ class Challenges
                 Console.WriteLine("CalculateExponent(" + number24 + ", " + number24exp + ") --> " + CalculateExponent(number24int, number24expint));
             }
 
+            if (programChooserint == 25)
+            {
+                //Create a function to multiply all of the values in an array by the amount of values in the given array.
+                //Ex Array length = 3, so [1,4,2] would be [3, 12, 6]
+                int[] ints = [1, 4, 2];
+
+
+                foreach(int i in MultiplyByLength(ints)){
+                    Console.WriteLine();
+                }
+            }
+
+            if(programChooserint == 26)
+            {
+                //
+
+                Console.WriteLine("First String");
+                var str26 = Console.ReadLine();
+                
+                Console.WriteLine("Second String");
+                var words26 = Console.ReadLine();
+
+                Console.WriteLine("HammingDistance(" + str26 + "," + words26 + ") --> " + HammingDistance(str26,words26));
+            }
+
 
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
@@ -434,6 +459,44 @@ class Challenges
 #pragma warning restore CS8604 // Possible null reference argument.
     }
 
+    public static int HammingDistance(string s, string t)
+    {
+
+        if (s.Length != t.Length)
+        {
+            throw new Exception("Strings must be equal length");
+        }
+
+        int distance =
+            s.ToCharArray()
+            .Zip(t.ToCharArray(), (c1, c2) => new { c1, c2 })
+            .Count(m => m.c1 != m.c2);
+
+        return distance;
+    }
+
+    public static Array MultiplyByLength(int[] arr)
+    {
+        //multiply by arr.Length
+        /*int len = arr.Length;
+        int counter = 0;
+        while (counter != len){
+            arr[counter] = arr[counter] * len;
+            counter++;
+        }
+
+        string result = arr
+        return (result);*/
+
+        int length = arr.Length;
+
+        for(int i = 0; i < length; i++)
+        {
+            arr[i] *= arr.Length;
+        }
+
+        return arr;
+    }
     public static double CalculateExponent(int Num, int Exp)
     {
         double pow = Math.Pow(Num, Exp);
