@@ -443,6 +443,14 @@ class Challenges
                 Console.WriteLine("HammingDistance(" + str26 + "," + words26 + ") --> " + HammingDistance(str26,words26));
             }
 
+            if(programChooserint == 27)
+            {
+                Console.WriteLine("Please provide a first and last name.");
+                var str27 = Console.ReadLine();
+                Console.WriteLine("NameShuffle(" + str27 + ") --> " + NameShuffle(str27));
+
+            }
+
 
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
@@ -457,6 +465,20 @@ class Challenges
         }
 
 #pragma warning restore CS8604 // Possible null reference argument.
+    }
+
+    public static string NameShuffle(string Names)
+    {
+        string[] List = Names.Split(' ');
+
+        string Firstn = List[0];
+        string Lastn = List[1];
+
+        //string[] FinalList = { Lastn, Firstn };
+
+        string fullname = Lastn + " " + Firstn;
+
+        return fullname;
     }
 
     public static int HammingDistance(string s, string t)
