@@ -451,6 +451,27 @@ class Challenges
 
             }
 
+            if(programChooserint == 28)
+            {
+                int[] array2 = [ 0, 0 ];
+
+                Console.WriteLine("Please provide two numbers. We will return the lowest.");
+
+                Console.WriteLine("First Num");
+                var firstnum= Console.ReadLine();
+                int firstnumint = int.Parse(firstnum);
+                array2[0] = firstnumint;
+
+                Console.WriteLine("Second Num");
+                var secondnum = Console.ReadLine();
+                int secondnumint = int.Parse(secondnum);
+                array2[1] = secondnumint;
+
+
+                Console.WriteLine("smallerNum(" + firstnum + ", " + secondnum + ") --> " + smallerNum(array2));
+
+            }
+
 
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
 
@@ -465,6 +486,17 @@ class Challenges
         }
 
 #pragma warning restore CS8604 // Possible null reference argument.
+    }
+
+    public static int smallerNum(int[] arr)
+    {
+        Array.Sort(arr);
+        int Min = arr.ElementAtOrDefault(0);
+        int Max = arr.ElementAtOrDefault(1);
+
+        //int[] MinMaxArr = [Min, Max];
+
+        return Min;
     }
 
     public static string NameShuffle(string Names)
