@@ -480,6 +480,11 @@ class Challenges
                 
                 Console.WriteLine("Factorial(" + Num1 + ") --> "+ Factorial(Num1));
             }
+            /*
+            if(programChooserint == 30)
+            {
+
+            }*/
 
 
             // try stackoverflow.com/questions/35871069 "tryParse" to provide a failsafe and warn the user? i don't wnat the program to crash immediately when a numerical value isn't provided :(
@@ -496,6 +501,19 @@ class Challenges
 
 #pragma warning restore CS8604 // Possible null reference argument.
     }
+    /*
+    public static int CountVowels(string Word)
+    {
+        Word = Word.ToLower();
+        string[] Letters = Word.Split(Word);
+        var vowels = new HashSet<char>('a', 'e', 'i', 'o', 'u');
+
+        int counter = 0;
+        foreach (vowels.Contains(sentence[i])
+        {
+            counter++;
+        }
+    }*/
 
     public static int Factorial(int Num)
     {
