@@ -424,10 +424,11 @@ class Challenges
                 //Ex Array length = 3, so [1,4,2] would be [3, 12, 6]
                 int[] ints = [1, 4, 2];
 
-
-                foreach(int i in MultiplyByLength(ints)){
+                foreach (int i in MultiplyByLength(ints)){
                     Console.WriteLine();
                 }
+
+                Console.WriteLine("FindMinMax(" + string.Join(",", ints) + ") --> [" + string.Join(",", MultiplyByLength(ints)) + "]");
             }
 
             if(programChooserint == 26)

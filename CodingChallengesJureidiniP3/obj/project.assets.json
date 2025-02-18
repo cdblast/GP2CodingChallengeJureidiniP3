@@ -8,19 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Per3Student\\.nuget\\packages\\": {}
+    "C:\\Users\\Per3Student\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Per3Student\\Documents\\github\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\CodingChallengesJureidiniP3.csproj",
+      "projectUniqueName": "C:\\Users\\Per3Student\\Documents\\GitHub\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\CodingChallengesJureidiniP3.csproj",
       "projectName": "CodingChallengesJureidiniP3",
-      "projectPath": "C:\\Users\\Per3Student\\Documents\\github\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\CodingChallengesJureidiniP3.csproj",
+      "projectPath": "C:\\Users\\Per3Student\\Documents\\GitHub\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\CodingChallengesJureidiniP3.csproj",
       "packagesPath": "C:\\Users\\Per3Student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Per3Student\\Documents\\github\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\obj\\",
+      "outputPath": "C:\\Users\\Per3Student\\Documents\\GitHub\\GP2CodingChallengeJureidiniP3\\CodingChallengesJureidiniP3\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Per3Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -45,7 +50,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -66,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
